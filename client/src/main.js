@@ -3,8 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// require('.../node_modules/bootstrap/dist/css/bootstrap.css')
+import axios from 'axios'
+http://127.0.0.1:8000/api/register
 
+axios.defaults.baseURL = 'http://127.0.0.1:8000/api';
+
+// Important: If axios is used with multiple domains, the AUTH_TOKEN will be sent to all of them.
+// See below for an example using Custom instance defaults instead.
+
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Accept'] = 'application/json';
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
